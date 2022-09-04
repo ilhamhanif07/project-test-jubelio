@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ErrorHandling from "./components/ErrorHandling";
 import { Router } from "./router/Router";
 
 class App extends Component {
@@ -11,11 +10,7 @@ class App extends Component {
       };
    }
    render() {
-      return (
-         <ErrorHandling>
-            <Router />
-         </ErrorHandling>
-      );
+      return <Router />;
    }
 }
 

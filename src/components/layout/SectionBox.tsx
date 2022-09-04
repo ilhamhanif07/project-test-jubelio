@@ -1,27 +1,26 @@
 import React from "react";
-import { Box, Toolbar } from "@mui/material";
+import { Box } from "@mui/material";
 import SectionContainer from "./SectionContainer";
 import Footer from "./Footer";
 import Header from "./Header";
 
-function SectionBox(props: any) {
+interface Props {
+   children: React.ReactNode;
+}
+
+function SectionBox({ children }: Props) {
    return (
       <>
          <Box
             sx={{
                backgroundColor: "grey",
-               flexGrow: 1,
-               height: "100vh",
-               overflow: "auto",
                display: "flex",
                flexDirection: "column",
                minHeight: "100vh",
             }}
          >
             <Header />
-
-            <SectionContainer>{props.children}</SectionContainer>
-
+            <SectionContainer>{children}</SectionContainer>
             <Footer />
          </Box>
       </>

@@ -1,13 +1,13 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { ReactNode } from "react";
+
 import SectionBox from "./SectionBox";
 
-function Layout() {
-   return (
-      <SectionBox>
-         <Outlet />
-      </SectionBox>
-   );
+interface Props {
+   children: ReactNode;
+}
+
+function Layout({ children }: Props) {
+   return <SectionBox>{children}</SectionBox>;
 }
 
 export default Layout;

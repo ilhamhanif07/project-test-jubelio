@@ -1,19 +1,18 @@
 import React, { Suspense, lazy } from "react";
-import { useRoutes } from "react-router-dom";
-import { allRoutes } from "./routes";
-const Layout = React.lazy(() => import("../components/layout/Layout"));
+import { Routes, Route } from "react-router-dom";
+import ErrorHandling from "../components/ErrorHandling";
 
-const routes = [
-   {
-      path: "/",
-      element: <Layout />,
-      children: allRoutes,
-   },
-];
+const Layout = lazy(() => import("../components/layout/Layout"));
+const Home = lazy(() => import("../pages/Home"));
 
-export const Router = () => {
-   console.log(routes);
-
-   let selectedRoutes = useRoutes(routes);
-   return <Suspense fallback="Loading...">{selectedRoutes}</Suspense>;
-};
+export const Router = () => (
+   <ErrorHandling>
+      <Suspense fallback={""}>
+         <Layout>
+            <Routes>
+               <Route path="/" element={<Home />} />
+            </Routes>
+         </Layout>
+      </Suspense>
+   </ErrorHandling>
+);
