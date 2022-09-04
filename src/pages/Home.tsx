@@ -48,7 +48,7 @@ const Home = () => {
                lastIndex + NUM_PER_PAGE
             );
 
-            if (!slice.length) {
+            if (data.length < listProduct.length) {
                setTrigger(true);
                setLoadingIntersect(true);
             }
