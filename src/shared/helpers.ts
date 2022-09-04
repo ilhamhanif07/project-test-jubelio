@@ -28,7 +28,5 @@ export function initArray(keys: any) {
 export function strMatch(str: string, targetString: string) {
    if (!str) return true;
    if (!targetString) return false;
-   console.log(String(targetString).toLowerCase().includes(String(str).toLowerCase()), "asu");
-
    return String(targetString).toLowerCase().includes(String(str).toLowerCase());
 }

@@ -7,7 +7,6 @@ import Button$1 from "@mui/material/Button";
 
 export const Button = (props: any) => {
    const className = [props.className];
-   console.log(props);
 
    const onClick = () => {
       if (props.onClick) props.onClick();
