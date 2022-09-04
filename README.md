@@ -7,4 +7,4 @@
 ###AFTER INSTALL IT, PLEASE MAKE SURE CORS UNBLOCK EXTENSIONS IS ENABLE.
 ###GO TO RUN!
 
-[DEMO](https://jubelio-test.vercel.app/)
+[DEMO](https://jubelio-project-test.vercel.app/)
