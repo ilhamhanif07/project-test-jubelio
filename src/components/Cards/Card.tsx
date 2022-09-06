@@ -88,14 +88,12 @@ const Card = React.forwardRef((props: Props, ref: any) => {
                }
                alt="green iguana"
             />
-            <CardContent>
+
+            <CardContent sx={{ bgcolor: "#f5f5f5", borderTop: "1px solid #d9d9d9" }}>
                <Title>{data.prdNm}</Title>
-               <Typography variant="subtitle1" color="#212121">
+               <Typography pt={4} variant="subtitle1" fontWeight={500} color="#212121">
                   {Rupiah(data.selPrc)}
                </Typography>
-               {Object.keys(data?.sellerPrdCd).length > 0 && (
-                  <Chip label={data.sellerPrdCd} color="success" />
-               )}
             </CardContent>
          </WrapperCard>
       </Card$2>
