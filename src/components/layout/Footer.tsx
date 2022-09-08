@@ -6,16 +6,18 @@ export default function Footer() {
       className: "nav-link ",
       type: "link",
       isExternal: true,
-      href: "https://github.com/",
+      href: "https://github.com/ilhamhanif07",
    };
 
    return (
-      <Container maxWidth="lg" sx={{ flexGrow: 0, flexShrink: 0, flexBasis: "auto" }}>
-         <div className="footer rounded-top bg-white font-weight-bolder py-2 px-5">
-            <Button {...btnProps}>
-               Github - Ilham Hanif <small>(Jubelio - Elevenia API)</small>
-            </Button>
-         </div>
-      </Container>
+      <footer className="bg-white">
+         <Container maxWidth="lg">
+            <div className="footer rounded-top  font-weight-bolder py-2 px-5">
+               <Button {...btnProps}>
+                  Github - Ilham Hanif <small>(Jubelio - Elevenia API)</small>
+               </Button>
+            </div>
+         </Container>
+      </footer>
    );
 }

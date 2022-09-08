@@ -86,7 +86,7 @@ const Card = React.forwardRef((props: Props, ref: any) => {
                      ? data.prdImage01
                      : "https://jubelio.com/wp-content/uploads/2020/03/01-1.png"
                }
-               alt="green iguana"
+               alt="gambar"
             />
 
             <CardContent sx={{ bgcolor: "#f5f5f5", borderTop: "1px solid #d9d9d9" }}>

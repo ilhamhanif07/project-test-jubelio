@@ -77,7 +77,8 @@ const CustomInput = React.forwardRef(function CustomInput(
    props: InputUnstyledProps,
    ref: React.ForwardedRef<HTMLDivElement>
 ) {
-   const { components, ...other } = props;
+   const { components, style, ...other } = props;
+
    return (
       <InputUnstyled
          components={{
@@ -85,6 +86,7 @@ const CustomInput = React.forwardRef(function CustomInput(
             Input: StyledInputElement,
             ...components,
          }}
+         componentsProps={{ input: { style } }}
          {...other}
          ref={ref}
       />

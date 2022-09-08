@@ -5,7 +5,19 @@ import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import Button$1 from "@mui/material/Button";
 
-export const Button = (props: any) => {
+interface Props {
+   type?: string;
+   onClick?: () => void;
+   target?: string;
+   className?: string;
+   isExternal?: boolean;
+   btnProps?: object;
+   style?: object;
+   href?: any;
+   children?: React.ReactNode;
+}
+
+export const Button = (props: Props) => {
    const className = [props.className];
 
    const onClick = () => {
@@ -57,4 +69,5 @@ Button.propTypes = {
    className: propTypes.string,
    isExternal: propTypes.bool,
    btnProps: propTypes.object,
+   style: propTypes.object,
 };

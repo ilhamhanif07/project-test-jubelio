@@ -1,23 +1,14 @@
-import React from "react";
-import { Button } from "../Button/Button";
-import { Container } from "@mui/material";
-import Input, { InputAdornment } from "../Input/Input";
-import SearchIcon from "@mui/icons-material/Search";
-import { useSetRecoilState } from "recoil";
-import { searchAtom } from "../../shared/atoms";
 import styled from "@emotion/styled";
-import { useWindowScroll } from "react-use";
+import SearchIcon from "@mui/icons-material/Search";
+import { Container } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useWindowScroll } from "react-use";
+import { useSetRecoilState } from "recoil";
 import logo from "../../assets/images/logo.jpg";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Badge from "@mui/material/Badge";
+import { searchAtom } from "../../shared/atoms";
+import Input, { InputAdornment } from "../Input/Input";
 
 function Header() {
-   const btnProps = {
-      className: "btn btn-link rounded-pill nav-link font-weight-bolder",
-      isPrimary: true,
-   };
-
    const setSearch = useSetRecoilState(searchAtom);
 
    const { y } = useWindowScroll();
@@ -55,11 +46,6 @@ function Header() {
                   </InputAdornment>
                }
             />
-            <Button {...btnProps}>
-               <Badge badgeContent={4} color="info">
-                  <ShoppingCartIcon color="disabled" />
-               </Badge>
-            </Button>
          </Container>
       </Nav>
    );

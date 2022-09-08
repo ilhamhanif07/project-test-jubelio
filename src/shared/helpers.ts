@@ -1,3 +1,5 @@
+import convert from "xml-js";
+
 export function RemoveJsonTextAttribute(value: any, parentElement: any) {
    try {
       var keyNo = Object.keys(parentElement._parent).length;
@@ -29,4 +31,12 @@ export function strMatch(str: string, targetString: string) {
    if (!str) return true;
    if (!targetString) return false;
    return String(targetString).toLowerCase().includes(String(str).toLowerCase());
+}
+
+export function parseXMLtoJS(data: any) {
+   return convert.xml2js(data, {
+      compact: true,
+      textFn: RemoveJsonTextAttribute,
+      ignoreDeclaration: true,
+   });
 }

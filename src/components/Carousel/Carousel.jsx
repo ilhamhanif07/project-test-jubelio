@@ -1,14 +1,15 @@
-import React, { ReactElement } from "react";
 import { Carousel } from "react-responsive-carousel";
 
 export default function Carousel$1(props) {
    const { data, name } = props;
 
+   console.log(data);
+
    return (
       <Carousel autoPlay>
          {data.length > 0 &&
             data.map((item, i) => (
-               <div>
+               <>
                   <img
                      src={item}
                      onError={(e) =>
@@ -17,7 +18,7 @@ export default function Carousel$1(props) {
                      alt={`${name}_${i}`}
                   />
                   <p className="legend">{name}</p>
-               </div>
+               </>
             ))}
       </Carousel>
    );

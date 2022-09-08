@@ -18,11 +18,12 @@ const Body = styled.div`
   align-items: center; */
    background-color: #fff;
    overflow: auto;
+   gap: 2rem;
 `;
 
 interface Props {
    children?: any;
-   props?: any;
+   className?: any;
 }
 
 const ModalBody = ({ children, ...props }: Props) => {
